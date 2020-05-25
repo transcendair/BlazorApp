@@ -13,6 +13,7 @@ using Microsoft.Extensions.Hosting;
 using System.Linq;
 using BlazorApp2.Server.Data;
 using BlazorApp2.Server.Models;
+using BlazorApp2.Areas.Identity;
 
 namespace BlazorApp2.Server
 {
@@ -44,6 +45,12 @@ namespace BlazorApp2.Server
 
             services.AddControllersWithViews();
             services.AddRazorPages();
+            services.AddScoped<AuthenticationStateProvider, RevalidatingIdentityAuthenticationStateProvider<IdentityUser>>();
+            services.AddAuthentication().AddGoogle(googleOptions =>
+            {
+                googleOptions.ClientId = Configuration["Authentication:Google:ClientId"];
+                googleOptions.ClientSecret = Configuration["Authentication:Google:ClientSecret"];
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
