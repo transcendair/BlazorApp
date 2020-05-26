@@ -11,11 +11,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System.Linq;
-using BlazorApp2.Server.Data;
-using BlazorApp2.Server.Models;
-using BlazorApp2.Areas.Identity;
+using BlazorApp.Server.Data;
+using BlazorApp.Server.Models;
+using BlazorApp.Areas.Identity;
 
-namespace BlazorApp2.Server
+namespace BlazorApp.Server
 {
     public class Startup
     {

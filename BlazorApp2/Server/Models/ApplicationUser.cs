@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BlazorApp2.Server.Models
+namespace BlazorApp.Server.Models
 {
     public class ApplicationUser : IdentityUser
     {

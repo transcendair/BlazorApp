@@ -1,4 +1,4 @@
-﻿using BlazorApp2.Shared;
+﻿using BlazorApp.Shared;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace BlazorApp2.Server.Controllers
+namespace BlazorApp.Server.Controllers
 {
     [Authorize]
     [ApiController]
